@@ -1,0 +1,19 @@
+Create database file_catalog;
+use file_catalog;
+CREATE TABLE Files
+(
+name varchar(255) NOT NULL PRIMARY KEY,
+owner varchar(255),
+fileSize int(255),
+permission varchar(10)
+);
+
+CREATE TABLE Users (
+    username varchar(255) NOT NULL PRIMARY KEY,
+    password varchar(255) NOT NULL
+);
+
+INSERT INTO Users
+VALUES ('user', 'user123');
+INSERT INTO Users
+VALUES ('user2', 'user123');
