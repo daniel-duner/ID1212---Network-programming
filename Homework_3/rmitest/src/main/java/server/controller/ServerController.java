@@ -1,14 +1,13 @@
 package server.controller;
 
-import common.CallClient;
-import common.CallServer;
-import common.Credentials;
+import common.*;
 import common.Exceptions.AccessDeniedException;
 import common.Exceptions.UserIsNotLoggedInException;
 import common.Exceptions.UserNameIsTakenException;
-import common.File;
 import server.integration.DBH;
+import server.integration.FileTransferServer;
 
+import java.lang.reflect.Array;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
@@ -17,8 +16,12 @@ public class ServerController extends UnicastRemoteObject implements CallServer 
     public static final String NAME_IN_REGISTRY = "serverController";
     DBH db = new DBH();
     HashMap<String,CallClient> users = new HashMap();
+    LinkedList<Integer> transferPorts= new LinkedList<>();
 
     public ServerController() throws RemoteException {
+        transferPorts.push(12345);
+        transferPorts.push(12346);
+        transferPorts.push(12347);
     }
 
 
@@ -28,22 +31,31 @@ public class ServerController extends UnicastRemoteObject implements CallServer 
     }
 
     @Override
-    public boolean addFile(File file, Credentials cred) throws RemoteException, UserIsNotLoggedInException {
+    public TransferDTO addFile(File file, Credentials cred) throws RemoteException, UserIsNotLoggedInException {
         if(checkCredentials(cred)){
-            return db.addFile(file);
+            if(db.addFile(file)){
+                Integer port;
+                while((port = transferPorts.peekFirst()) == null){}
+                new Thread(new FileTransferServer(port, true, file.getName(),transferPorts)).start();
+                return new TransferDTO(port, "localhost");
+            }
         } else {
             throw new UserIsNotLoggedInException("user is not logged in");
         }
+        return null;
     }
 
     @Override
-    public File downloadFile(String fileName,Credentials cred) throws RemoteException, UserIsNotLoggedInException {
+    public TransferDTO downloadFile(String fileName, Credentials cred) throws RemoteException, UserIsNotLoggedInException, NoSuchElementException {
         if(checkCredentials(cred)){
             File download = db.downloadFile(fileName);
-            if(users.containsKey(download.getOwner())){
+            Integer port;
+            while((port = transferPorts.peekFirst()) == null){}
+            new Thread(new FileTransferServer(port,false,fileName, transferPorts)).start();
+            if(users.containsKey(download.getOwner()) && cred.getUserName().equals(download.getOwner())){
                 users.get(download.getOwner()).contactClient("Your file: "+download.getName()+" has been downloaded by: "+cred.getUserName());
             }
-            return download;
+            return new TransferDTO(port, "localhost");
         } else{
             throw new UserIsNotLoggedInException("user is not logged in");
         }

@@ -1,6 +1,5 @@
 package client.view;
 
-import com.mysql.cj.protocol.x.XMessage;
 import common.*;
 import common.Exceptions.UserIsNotLoggedInException;
 

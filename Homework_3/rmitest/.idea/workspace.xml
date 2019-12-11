@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f77f52e-406e-453c-b542-c917e5e2ee59" name="Default Changelist" comment="" />
+    <list default="true" id="91f69240-017c-4ef7-bb6c-d604b3625198" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Homework_1/Hangerman/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/client/view/FileTransferClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/TransferDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/integration/FileTransferServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework_1/Hangerman/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework_1/Hangerman/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework_2/src/main/java/server/model/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework_2/src/main/java/server/model/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework_3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/view/Communicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/view/Communicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/view/Messenger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/view/Terminal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/view/Terminal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/CallServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/CallServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/controller/ServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/client/view/Communicator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/client/view/Communicator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/client/view/Messenger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/client/view/Terminal$Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/client/view/Terminal$Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/client/view/Terminal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/client/view/Terminal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/CallServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/CallServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/server/controller/ServerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/controller/ServerController.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -29,21 +40,25 @@
       </list>
     </option>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1U6I9A7WZztgzr5aHXG6iptmDC0" />
+  <component name="ProjectId" id="1UEX5NJ0r3sZx7ZAvnPmgCxRSuG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.18.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\danie\Desktop\ID1212\Homework_3\rmitest\src\main\java\client\download" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -57,22 +72,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StartServer">
+  <component name="RunManager" selected="Application.StartClient">
     <configuration name="StartClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.startup.StartClient" />
-      <module name="Homework_3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="client.startup.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StartClient2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="client.startup.StartClient2" />
       <module name="Homework_3" />
       <extension name="coverage">
         <pattern>
@@ -97,25 +99,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.integration.Test" />
-      <module name="Homework_3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.integration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StartServer" />
-        <item itemvalue="Application.StartClient2" />
         <item itemvalue="Application.StartClient" />
-        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.StartServer" />
       </list>
     </recent_temporary>
   </component>
@@ -124,33 +111,60 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5f77f52e-406e-453c-b542-c917e5e2ee59" name="Default Changelist" comment="" />
-      <created>1574670463508</created>
+      <changelist id="91f69240-017c-4ef7-bb6c-d604b3625198" name="Default Changelist" comment="" />
+      <created>1574922543884</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1574670463508</updated>
-      <workItem from="1574670466656" duration="36637000" />
-      <workItem from="1574708073615" duration="79000" />
-      <workItem from="1574708174258" duration="482000" />
-      <workItem from="1574708679344" duration="69000" />
+      <updated>1574922543884</updated>
+      <workItem from="1574922545332" duration="7769000" />
+      <workItem from="1575013983482" duration="1112000" />
+      <workItem from="1575228874374" duration="6929000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/server/integration/DBH.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="34" />
+          <url>file://$PROJECT_DIR$/src/main/java/server/controller/ServerController.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/server/integration/DBH.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/src/main/java/server/integration/FileTransferServer.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/server/integration/FileTransferServer.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/server/integration/FileTransferServer.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/server/integration/FileTransferServer.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

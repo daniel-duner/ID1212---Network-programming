@@ -14,9 +14,9 @@ public interface CallServer extends Remote {
 
     boolean signup(Credentials cred) throws RemoteException, UserNameIsTakenException;
 
-    boolean addFile(File file,Credentials cred) throws RemoteException, UserIsNotLoggedInException;
+    TransferDTO addFile(File file,Credentials cred) throws RemoteException, UserIsNotLoggedInException;
 
-    File downloadFile(String fileName,Credentials cred) throws RemoteException, UserIsNotLoggedInException;
+    TransferDTO downloadFile(String fileName,Credentials cred) throws RemoteException, UserIsNotLoggedInException;
 
     Credentials login(Credentials cred,CallClient remoteNode) throws  RemoteException;
 

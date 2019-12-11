@@ -43,7 +43,6 @@ public class Word implements Runnable{
                         buffer.clear();
                         channel.read(buffer);
                         word = str.toString();
-                        //print(word);
                         buffer.clear();
                         break;
                     }

@@ -1,13 +1,10 @@
 package client.view;
 
 import com.sun.org.apache.regexp.internal.RE;
-import common.CallServer;
-import common.Credentials;
+import common.*;
 import common.Exceptions.AccessDeniedException;
 import common.Exceptions.UserIsNotLoggedInException;
 import common.Exceptions.UserNameIsTakenException;
-import common.File;
-import common.Print;
 
 import java.rmi.RemoteException;
 import java.util.LinkedList;
@@ -89,10 +86,10 @@ public class Communicator {
                 break;
             } else {
                 try{
-                    File download = server.downloadFile(input, cred);
-                    if(download != null){
-                        Print.print("Your file was succesfully uploaded");
-                        Print.print("File name: "+download.getName()+" Owner: "+download.getOwner()+" File size: "+download.getSize());
+                    TransferDTO transferDTO = server.downloadFile(input, cred);
+                    FileTransferClient ftc = new FileTransferClient(transferDTO, input,false);
+                    if(ftc.run()){
+                        Print.print("Your file was succesfully downloaded");
                         break;
                     } else{
                         Print.print("A file with that name does not exist, try again");
@@ -101,6 +98,8 @@ public class Communicator {
                     e.printStackTrace();
                 } catch (UserIsNotLoggedInException e){
                     Print.print("You are not logged in ");
+                } catch (NoSuchElementException e){
+                    Print.print("A file with that name does not exist, try again");
                 }
             }
 
@@ -173,7 +172,9 @@ public class Communicator {
                 else {
                     File newFile = new File(input, cred.getUserName(), getFileSize(input), readOnly);
                     try {
-                        if (server.addFile(newFile, cred)) {
+                        TransferDTO transferDTO = server.addFile(newFile, cred);
+                        FileTransferClient ftc = new FileTransferClient(transferDTO, input,true);
+                        if (ftc.run()){
                             Print.print("Your file was succesfully uploaded");
                             break;
                         } else {
