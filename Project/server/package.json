@@ -9,12 +9,15 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "test"
+    "server": "nodemon index.js",
+    "test": "test",
+    "client": "npm run start --preefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Daniel Dunér",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^5.0.1",
     "cookie-session": "^1.3.3",
     "express": "^4.17.1",
     "mongoose": "^5.8.0",

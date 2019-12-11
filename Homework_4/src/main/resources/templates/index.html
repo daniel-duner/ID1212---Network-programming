@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Currency Converter</h1>
+<form action="#" th:action="@{/}" th:object="${conversion}" method="post">
+        <p>Currency from: <select th:field="*{from}">
+            <option th:each="currency: ${currencies}"
+                    th:value="${currency.id}"
+                    th:utext="${currency.id}"></option>
+        </select></p>
+        <p>Currency to: <select th:field="*{to}">
+                <option th:each="currency: ${currencies}"
+                        th:value="${currency.id}"
+                        th:utext="${currency.id}"></option>
+    </select></p>
+
+    <p>Amount : <input type="text" th:field="*{amount}"/></p>
+    <td th:if="${fail}"> Amount must be a positive number, try again</td>
+    <p><input type="submit" value="Convert" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>

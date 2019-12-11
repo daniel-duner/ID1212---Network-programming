@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Admin interface</h1>
+<form action="#" th:action="@{/admin}" th:object="${currency}" method="post"></p>
+    <p>Currency name: <select th:field="*{id}">
+        <option th:each="curr: ${currencies}"
+                th:value="${curr.id}"
+                th:utext="${curr.id}"></option>
+    </select></p>
+    <p>rate : <input type="text" th:field="*{rate}" /></p>
+    <p><input type="submit" value="Convert" /> <input type="reset" value="Reset" /></p>
+    <td th:if="${fail}"> Amount must be a positive number, try again</td>
+    <p type="text" th:text="'Amount of transactions: '+${count}" />
+</form>
+</body>
+</html>
