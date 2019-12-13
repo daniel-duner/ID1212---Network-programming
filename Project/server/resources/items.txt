@@ -1,0 +1,21 @@
+{
+"name": "Walkingpad",
+"imageURL": "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2018/11/15/goods_img_big-v2/20181115174055_52021.jpg",
+"price": 4800, 
+"quantity": 10,
+"description": "This walking pad is is silent, smart and sturdy to provide you a safe walking experience. It is foldable and compact which takes up little space, very convenient to store under the bed, desk or furniture, perfect for home and office."
+}
+{
+"name": "APPLE iPhone 11 - 64GB",
+"imageURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-82227151/fee_786_587_png/APPLE-iPhone-11---64GB---Svart",
+"price": 8790, 
+"quantity": 20,
+"description": "Brand new dual camera system with ultra-wide angle. Night mode and impressive video quality. Resists water and dust. Battery lasting all day. A13 Bionic chip and 6.1 \"Liquid Retina display. In six stylish colors. Experience iPhone 11."
+}
+{
+"name": "SAMSUNG UE55RU6025KXXC - 55" UHD-TV med HDR - 2019",
+"imageURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-82029359/fee_786_587_png/SAMSUNG-UE55RU6025KXXC---55%22-UHD-TV-med-HDR---2019",
+"price": 5990, 
+"quantity": 20,
+"description": "Enjoy vivid and lifelike colors while watching movies, playing games or surfing the web with the Samsung 55 \"UHD Smart TV UE55RU7105. Use Amazon Alexa or Google Assistant to control the TV with your voice alone."
+}
