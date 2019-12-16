@@ -9,8 +9,8 @@ import * as actions from '../actions';
 
 
 class App extends React.Component {
-  async componentDidMount(){
-    await this.props.fetchUser()
+  componentDidMount(){
+    this.props.fetchUser()
     this.props.fetchCart();
   }
 

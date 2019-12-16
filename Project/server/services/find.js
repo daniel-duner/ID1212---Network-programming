@@ -1,13 +1,5 @@
-function addItemToCart(id, items){
-    if(findItemInCart(id, items)){
-        items[i].quantity++;
-        return true;
-    } else {
-        return false
-    }
-}
 
-function itemId(id, items){
+function itemInCartId(id, items){
     for (let i in items) {
         if (items[i]._id == id) {
            return i;
@@ -16,7 +8,7 @@ function itemId(id, items){
       return null;
 }
 
-function findItemInCart(id, items){
+function itemId(id, items){
     for (let i in items) {
       if (items[i].id == id) {
          return i;
@@ -25,6 +17,5 @@ function findItemInCart(id, items){
     return null;
 }
 
-exports.findItemInCart = findItemInCart;
-exports.addItemToCart = addItemToCart;
+exports.itemInCartId= itemInCartId;
 exports.itemId = itemId;

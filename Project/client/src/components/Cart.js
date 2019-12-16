@@ -50,11 +50,17 @@ class Cart extends React.Component {
     );
   };
 
+  renderRemove = (val) =>{
+    return (val == 0) ? <Button style={{ margin: " 0 10px 0 10px" }} variant="danger" onClick={this.props.removeAllItemsFromCart} disabled>Remove All</Button>
+        :
+    <Button style={{ margin: " 0 10px 0 10px" }} variant="danger" onClick={this.props.removeAllItemsFromCart}>Remove All</Button>
+  }
+
   renderPrice = () => {
     let value = 0;
-    this.props.cart.map(
-      item => (value = value + parseInt(item.price) * parseInt(item.quantity))
-    );
+    if(this.props.cart != null){
+        this.props.cart.map(item => (value = value + parseInt(item.price) * parseInt(item.quantity)));
+    }
     return (
       <Card
         style={{
@@ -67,26 +73,8 @@ class Cart extends React.Component {
         <Card.Body>
           <Card.Title>Total Price</Card.Title>
           <Card.Text style={{ fontWeight: "bold" }}>{new Intl.NumberFormat('de-DE',{style: 'currency', currency: 'SEK'}).format(value)}</Card.Text>
-          <Button style={{ margin: " 0 10px 0 10px" }} variant="danger" onClick={this.props.removeAllItemsFromCart}>
-            Remove All
-          </Button>
-          <Button variant="success">Buy Now</Button>
-        </Card.Body>
-      </Card>
-    );
-  };
-  renderEmptyCart = () => {
-    return (
-      <Card
-        style={{
-          width: "100%",
-          justifySelf: "center",
-          textAlign: "center",
-          marginTop: "20px"
-        }}
-      >
-        <Card.Body>
-          <Card.Title>There is nothing in your cart</Card.Title>
+          {this.renderRemove(value)}
+          <Button variant="success" disabled>Buy Now</Button>
         </Card.Body>
       </Card>
     );
@@ -97,7 +85,7 @@ class Cart extends React.Component {
       <Container style={{ marginTop: "4.5rem" }}>
         {console.log("what this",this.props.cart)}
         {this.props.cart != null? this.props.cart.map(item => this.renderCard(item)):""}
-        {this.props.cart == null || this.props.cart == []? this.renderEmptyCart():this.renderPrice()}
+        {this.renderPrice()}
       </Container>
     );
   }

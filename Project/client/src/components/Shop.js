@@ -22,7 +22,7 @@ class Shop extends React.Component {
       variant="primary" 
       id={id} 
       onClick={
-      async (e) => await this.props.addToCart(e.target.id).then(this.props.fetchCart())
+      async (e) => await this.props.addToCart(e.target.id)
       }>
       Add to cart
    </Button>)

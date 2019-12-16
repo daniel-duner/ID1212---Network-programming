@@ -19,3 +19,10 @@
 "quantity": 20,
 "description": "Enjoy vivid and lifelike colors while watching movies, playing games or surfing the web with the Samsung 55 \"UHD Smart TV UE55RU7105. Use Amazon Alexa or Google Assistant to control the TV with your voice alone."
 }
+{
+"name": "GOOGLE Chromecast (2018) - Charcoal Grey",
+"imageURL": "https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-78905953/fee_786_587_png/GOOGLE-Chromecast-%282018%29---Charcoal-Grey",
+"price": 399, 
+"quantity": 30,
+"description": "Med nya Chromecast (2018) kan du enkelt streama dina favoritprogram, filmer eller foton till din tv. Den fungerar smidigt med Google Home så att du kan styra tv:n med hjälp av rösten. 3 månaders viaplay ingår!"
+}
