@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Item = mongoose.model('items');
 module.exports = (app) => {
-    app.post('/api/cart/addItem', async (req, res) => {
+    app.post('/api/item/add', async (req, res) => {
         const request = await req.body;
         console.log(request);
         const existingItem = await Item.findOne({name: request.name});

@@ -1,1 +1,6 @@
 export const FETCH_USER = 'fetch_user'
+export const FETCH_CART = 'fetch_cart'
+export const FETCH_ITEMS = 'fetch_items'
+export const ADD_TO_CART = 'add_to_cart'
+export const DELETE_ITEM_FROM_CART = 'delete_item_from_cart'
+export const DELETE_ALL_ITEMS_FROM_CART = 'delete_all_items_from_cart'
