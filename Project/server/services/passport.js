@@ -2,8 +2,9 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const mongoose = require('mongoose');
 const keys = require('../config/keys');
-
+const userDBH = require('../integration/userDBH');
 const User = mongoose.model('users');
+
 
 passport.serializeUser(((user, done)=> {
     done(null, user.id);
@@ -22,9 +23,9 @@ passport.use(
         clientSecret: keys.googleClientSecret,
         callbackURL: '/auth/google/callback'
     }, async (accessToken, refreshToken, profile, done) => {
-        const existingUser = await User.findOne({googleId: profile.id});
+        const existingUser = await userDBH.findUser(profile.id);
             if(!existingUser){
-                const user = await new User({googleId: profile.id}).save()
+                const user = await userDBH.addUser(profile.id);
                 done(null, user);
             } else {
                 done(null, existingUser);

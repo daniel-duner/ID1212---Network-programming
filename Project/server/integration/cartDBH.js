@@ -19,6 +19,10 @@ module.exports = {
                 }
               ]
             }).save();
+            return({
+              status: 201,
+              data: existingCart.items
+          })
           } else {
             const index = await find.itemId(item._id, existingCart.items);
             if (index == null) {
@@ -30,6 +34,10 @@ module.exports = {
                 price: item.price
               });
               existingCart.save();
+              return({
+                status: 201,
+                data: existingCart.items
+            })
             } else {
               Cart.find({});
               existingCart.items[index].quantity++;
@@ -40,10 +48,6 @@ module.exports = {
             })
             }
         }
-        return({
-            status: 201,
-            data: existingCart.items
-        })
     },
     deleteItem: async (id, user) =>{
     const existingCart = await Cart.findOne({ user: user });
@@ -61,7 +65,6 @@ module.exports = {
         }  
       }
       else if (existingCart.items[index].quantity>1) {
-          console.log("index", index)
         existingCart.items[index].quantity--;
       } else {
             if(index == 0){
@@ -94,16 +97,26 @@ module.exports = {
       }
     },
     getCart: async (user) =>{
-      const cart = await Cart.find({ user: user});
+      const cart = await Cart.findOne({ user: user});
       if (cart == []) {
         return{
           status: 200,
           data: "No items in cart"
         }
       } else {
+        let data;
+        if(cart!= null){
+          if(cart.items != []){
+            data = cart.items;
+          } else {
+            data = [];
+          }
+        } else {
+          data = [];
+        }
         return {
           status: 200,
-          data: cart[0].items
+          data: data
         }
       }
     }

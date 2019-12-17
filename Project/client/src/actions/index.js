@@ -13,7 +13,7 @@ export const fetchUser = () => async dispatch => {
        dispatch({ type: FETCH_USER, payload: res.data});
 };
 export const fetchCart = () => async dispatch => {
-    const res = await axios('/api/cart/get')
+    const res = await axios('/api/cart/getAll')
     dispatch({ type: FETCH_CART, payload: res.data});
 };
 export const addToCart = (item) => async dispatch => {

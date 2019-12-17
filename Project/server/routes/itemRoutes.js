@@ -1,5 +1,3 @@
-const mongoose = require('mongoose');
-const Item = mongoose.model('items');
 const itemDBH = require('../integration/itemDBH');
 module.exports = (app) => {
     app.post('/api/item/add', async (req, res) => {

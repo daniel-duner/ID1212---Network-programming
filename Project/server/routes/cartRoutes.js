@@ -16,8 +16,10 @@ module.exports = app => {
     res.status(result.status).send(result.data);
   });
 
-  app.get("/api/cart/get", async (req, res) => {
-    const result = await cartDBH.getCart(req.user._id);
-    res.status(result.status).send(result.data);
+  app.get("/api/cart/getALL", async (req, res) => {
+    if(req.user){
+      const result = await cartDBH.getCart(req.user._id);
+      res.status(result.status).send(result.data);
+    }
   });
 };
